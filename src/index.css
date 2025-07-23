@@ -113,15 +113,15 @@ All colors MUST be HSL.
 
   /* Corporate gradients and shadows */
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--corporate-blue)) 0%, hsl(var(--corporate-blue-dark)) 100%);
+    background: linear-gradient(135deg, hsl(var(--corporate-blue)) 0%, hsl(var(--corporate-blue-dark)) 10%);
   }
 
   .gradient-section {
-    background: linear-gradient(180deg, hsl(var(--corporate-gray-light)) 0%, hsl(var(--background)) 100%);
+    background: linear-gradient(180deg, hsl(var(--corporate-gray-light)) 0%, hsl(var(--background)) 10%);
   }
 
   .gradient-dark {
-    background: linear-gradient(135deg, hsl(var(--corporate-navy)) 0%, hsl(var(--corporate-blue-dark)) 100%);
+    background: linear-gradient(135deg, hsl(var(--corporate-navy)) 0%, hsl(var(--corporate-blue-dark)) 10%);
   }
 
   .shadow-corporate {
