@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
@@ -16,6 +17,7 @@ const HeroSection = () => {
       
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white animate-fade-in">
+        <img src={logo} alt="MyrLink Logo" className="mb-8 mx-auto w-32 md:w-48" />
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Source Directly
           <br />
