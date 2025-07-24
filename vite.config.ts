@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: 'https://github.com/tashfeenMustafa/myrlink-source-connect.git',
   plugins: [
     react(),
     mode === 'development' &&
