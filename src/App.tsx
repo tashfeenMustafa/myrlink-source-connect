@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DirectFactorySourcing from "./components/pages/DirectFactorySourcing";
 import CustomProductSourcing from "./components/pages/CustomProductSourcing";
+import QualityAssurance from "./components/pages/QualityAssurance";
+import LogisticsShipping from "./components/pages/LogisticsShipping";
+import MarketResearch from "./components/pages/MarketResearch";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import TermsOfService from "./components/pages/TermsOfService";
 import Index from "./pages/Index";
@@ -22,6 +25,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services/direct-factory-sourcing" element={<DirectFactorySourcing />} />
           <Route path="/services/custom-product-sourcing" element={<CustomProductSourcing />} />
+          <Route path="/services/quality-assurance" element={<QualityAssurance />} />
+          <Route path="/services/logistics-shipping" element={<LogisticsShipping />} />
+          <Route path="/services/market-research" element={<MarketResearch />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
