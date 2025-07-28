@@ -7,8 +7,6 @@ import CaseStudySection from "@/components/CaseStudySection";
 import GlobalReachSection from "@/components/GlobalReachSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 const Index = () => {
   return (

@@ -59,9 +59,9 @@ const Footer = () => {
               © 2025 MyrLink Ltd. All rights reserved.
             </div>
             <div className="flex space-x-6 text-blue-200 text-sm">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Contact</a>
+              <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="/#contact" className="hover:text-white transition-colors">Contact</a>
             </div>
           </div>
         </div>
