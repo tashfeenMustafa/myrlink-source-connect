@@ -28,19 +28,19 @@ const Navigation = () => {
       description: "Tailored sourcing solutions for your specific product requirements."
     },
     {
-      title: "Quality Assurance",
-      href: "/services/quality-assurance",
-      description: "Comprehensive quality control and inspection services."
+      title: "OEM & ODM Manufacturing",
+      href: "/services/oem-odm-manufacturing",
+      description: "Bring your product ideas to life with turnkey manufacturing solutions."
     },
     {
-      title: "Logistics & Shipping",
-      href: "/services/logistics-shipping",
-      description: "End-to-end logistics solutions for your supply chain."
+      title: "End To End Procurement",
+      href: "/services/end-to-end-procurement",
+      description: "Complete sourcing, negotiation, and delivery handled by our experts."
     },
     {
-      title: "Market Research",
-      href: "/services/market-research",
-      description: "In-depth market analysis and supplier evaluation services."
+      title: "Supplier Audits & QC",
+      href: "/services/supplier-audits-qc",
+      description: "Ensure quality and compliance with factory audits and product inspections."
     }
   ];
 

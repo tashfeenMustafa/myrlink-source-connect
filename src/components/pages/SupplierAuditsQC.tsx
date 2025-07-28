@@ -1,11 +1,10 @@
-// Template-based page for Logistics & Shipping
-import { ArrowLeft, Truck, Plane, Clock, MapPin } from "lucide-react";
+// Template-based page for Supplier Audits & QC
+import { ArrowLeft, ShieldCheck, ClipboardList, SearchCheck, AlertCircle, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Navigation from "../Navigation";
 import Footer from "@/components/Footer";
 
-const LogisticsShipping = () => {
+const SupplierAuditsQC = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -20,10 +19,10 @@ const LogisticsShipping = () => {
             Back to Home
           </Button>
           <div className="flex items-center space-x-4">
-            <Truck className="w-12 h-12 text-blue-300" />
+            <ShieldCheck className="w-12 h-12 text-green-300" />
             <div>
-              <h1 className="text-4xl font-bold">Logistics & Shipping</h1>
-              <p className="text-blue-200 text-lg">Seamless delivery from factory to destination</p>
+              <h1 className="text-4xl font-bold">Supplier Audits & QC</h1>
+              <p className="text-blue-200 text-lg">Trust but verify—ensure your suppliers meet expectations</p>
             </div>
           </div>
         </div>
@@ -33,44 +32,44 @@ const LogisticsShipping = () => {
       <div className="container mx-auto px-6 py-12">
         {/* Overview */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-6">Reliable Global Logistics Solutions</h2>
+          <h2 className="text-3xl font-bold mb-6">Reduce Risk, Increase Confidence</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            We manage the complete logistics and shipping process to ensure your goods arrive safely, on time, and with full transparency. From factory pickup to final delivery, we handle documentation, customs clearance, and coordination every step of the way.
+            Our supplier audit and quality control services are designed to give you confidence in every link of your supply chain. From pre-engagement factory assessments to in-production inspections and final shipment checks, we verify that your partners are capable, compliant, and delivering as promised.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Card className="text-center">
               <CardHeader>
-                <Plane className="w-12 h-12 text-red-500 mx-auto mb-4" />
-                <CardTitle>Multi-Modal Shipping</CardTitle>
+                <ClipboardList className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+                <CardTitle>Factory Audits</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Sea, air, rail, and truck freight options tailored to your timeline and budget.
+                  Evaluate capacity, quality systems, certifications, and ethical practices before committing.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
-                <Clock className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-                <CardTitle>On-Time Delivery</CardTitle>
+                <SearchCheck className="w-12 h-12 text-blue-500 mx-auto mb-4" />
+                <CardTitle>In-Process Inspections</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Track shipments in real-time and stay ahead of delays with proactive updates.
+                  Monitor production runs to catch defects early and ensure compliance with your specifications.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
-                <MapPin className="w-12 h-12 text-purple-500 mx-auto mb-4" />
-                <CardTitle>Global Coverage</CardTitle>
+                <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
+                <CardTitle>Final QC & Reporting</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Delivery solutions for North America, Europe, Asia, and emerging markets.
+                  Full shipment inspections and documentation to verify quality and prevent costly returns.
                 </p>
               </CardContent>
             </Card>
@@ -79,14 +78,14 @@ const LogisticsShipping = () => {
 
         {/* Process */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-8">Our Shipping Process</h2>
+          <h2 className="text-3xl font-bold mb-8">Our Audit & QC Process</h2>
           <div className="space-y-8">
             {[
-              ["Pickup & Coordination", "Goods collected directly from the factory or warehouse."],
-              ["Customs & Compliance", "Handle paperwork, duties, and regulatory clearance."],
-              ["Freight Booking", "Choose optimal routes and rates for your delivery needs."],
-              ["Tracking & Communication", "Live shipment tracking with regular updates."],
-              ["Final Delivery", "End-to-end delivery to your warehouse or designated location."]
+              ["Pre-Audit Planning", "Define criteria, compliance benchmarks, and audit scope based on your product and market."],
+              ["On-Site Factory Audit", "Assess supplier operations, workforce, quality systems, and certifications in person."],
+              ["Audit Report & Risk Rating", "Receive a comprehensive scorecard with documentation, photos, and red flags highlighted."],
+              ["In-Production QC", "Conduct inspections during key production stages to monitor quality and consistency."],
+              ["Final Inspection & Approval", "Before shipping, verify the finished product matches specifications and passes all tests."]
             ].map(([title, desc], i) => (
               <div className="flex items-start space-x-6" key={i}>
                 <div className="bg-corporate-navy text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">{i + 1}</div>
@@ -102,13 +101,13 @@ const LogisticsShipping = () => {
         {/* CTA */}
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-muted p-8 rounded-lg">
-            <Truck className="w-16 h-16 text-corporate-navy mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-4">Need Hassle-Free Shipping?</h3>
+            <CheckCircle className="w-16 h-16 text-corporate-navy mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-4">Want Trusted Partners and Verified Goods?</h3>
             <p className="text-muted-foreground mb-6">
-              Let us simplify your logistics with expert coordination and global reach.
+              Let our audit and inspection experts protect your investment from day one.
             </p>
             <Button size="lg" className="bg-corporate-navy hover:bg-corporate-navy/90">
-              Request a Quote
+              Request a Supplier Audit
             </Button>
           </div>
         </div>
@@ -119,4 +118,4 @@ const LogisticsShipping = () => {
   );
 };
 
-export default LogisticsShipping;
+export default SupplierAuditsQC;

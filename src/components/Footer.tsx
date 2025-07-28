@@ -33,11 +33,31 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-blue-200 text-sm">
-              <li>Direct Factory Sourcing</li>
-              <li>Custom Product Sourcing</li>
-              <li>OEM/ODM Manufacturing</li>
-              <li>Supplier Audits</li>
-              <li>Quality Control</li>
+              <li>
+                <a href="/services/direct-factory-sourcing" className="hover:text-white transition-colors">
+                  Direct Factory Sourcing
+                </a>
+              </li>
+              <li>
+                <a href="/services/custom-product-sourcing" className="hover:text-white transition-colors">
+                  Custom Product Sourcing
+                </a>
+              </li>
+              <li>
+                <a href="/services/oem-odm-manufacturing" className="hover:text-white transition-colors">
+                  OEM & ODM Manufacturing
+                </a>
+              </li>
+              <li>
+                <a href="/services/end-to-end-procurement" className="hover:text-white transition-colors">
+                  End To End Procurement
+                </a>
+              </li>
+              <li>
+                <a href="/services/supplier-audits-qc" className="hover:text-white transition-colors">
+                  Market Research
+                </a>
+              </li>
             </ul>
           </div>
 

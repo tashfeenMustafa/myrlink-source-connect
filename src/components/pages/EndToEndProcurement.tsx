@@ -1,11 +1,10 @@
-// Template-based page for Quality Assurance
-import { ArrowLeft, ShieldCheck, ClipboardCheck, SearchCheck, CheckCircle } from "lucide-react";
+// Template-based page for End-to-End Procurement
+import { ArrowLeft, ShoppingCart, SearchCheck, DollarSign, Truck, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Navigation from "../Navigation";
 import Footer from "@/components/Footer";
 
-const QualityAssurance = () => {
+const EndToEndProcurement = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -20,10 +19,10 @@ const QualityAssurance = () => {
             Back to Home
           </Button>
           <div className="flex items-center space-x-4">
-            <ShieldCheck className="w-12 h-12 text-blue-300" />
+            <ShoppingCart className="w-12 h-12 text-blue-300" />
             <div>
-              <h1 className="text-4xl font-bold">Quality Assurance</h1>
-              <p className="text-blue-200 text-lg">Ensure product excellence at every stage</p>
+              <h1 className="text-4xl font-bold">End-to-End Procurement</h1>
+              <p className="text-blue-200 text-lg">Complete sourcing to delivery management—handled for you</p>
             </div>
           </div>
         </div>
@@ -33,44 +32,44 @@ const QualityAssurance = () => {
       <div className="container mx-auto px-6 py-12">
         {/* Overview */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-6">Rigorous Quality, Consistently Delivered</h2>
+          <h2 className="text-3xl font-bold mb-6">Procurement Made Seamless</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            Our Quality Assurance service guarantees that your products meet international standards, customer expectations, and regulatory compliance. From on-site inspections to lab testing and final shipment validation, we help you reduce risk and boost brand trust.
+            Our end-to-end procurement service eliminates complexity in international sourcing. From identifying trusted suppliers to managing payments, logistics, and delivery, we act as your on-the-ground partner throughout the entire procurement lifecycle.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Card className="text-center">
               <CardHeader>
-                <ClipboardCheck className="w-12 h-12 text-green-500 mx-auto mb-4" />
-                <CardTitle>Inspection Protocols</CardTitle>
+                <SearchCheck className="w-12 h-12 text-green-500 mx-auto mb-4" />
+                <CardTitle>Supplier Sourcing</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Multiple inspection stages to detect issues early and maintain consistency.
+                  Tap into our verified supplier network to find the right match for your needs.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
-                <SearchCheck className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-                <CardTitle>Supplier Audits</CardTitle>
+                <DollarSign className="w-12 h-12 text-red-500 mx-auto mb-4" />
+                <CardTitle>Payment & Compliance</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Thorough evaluations of facilities, compliance, and production capabilities.
+                  We handle contracts, currency exchange, and secure payments so you don’t have to.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
-                <CheckCircle className="w-12 h-12 text-purple-500 mx-auto mb-4" />
-                <CardTitle>Final QA Checks</CardTitle>
+                <Truck className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+                <CardTitle>Shipping & Delivery</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Quality verification before products leave the factory floor.
+                  Logistics, customs, and final-mile coordination—fully managed and transparent.
                 </p>
               </CardContent>
             </Card>
@@ -79,14 +78,14 @@ const QualityAssurance = () => {
 
         {/* Process */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-8">Our QA Process</h2>
+          <h2 className="text-3xl font-bold mb-8">Our Procurement Process</h2>
           <div className="space-y-8">
             {[
-              ["Requirement Gathering", "Understand product specs and critical tolerances."],
-              ["Factory Audit", "Evaluate facilities and production procedures."],
-              ["In-Process Inspection", "Spot checks during production stages."],
-              ["Final Inspection", "Random sampling based on AQL standards."],
-              ["Report & Validation", "Detailed report and approval before shipment."]
+              ["Requirement Gathering", "Understand your goals, volumes, quality expectations, and timelines."],
+              ["Supplier Matching", "Shortlist and engage with manufacturers that meet your criteria."],
+              ["Quotation & Negotiation", "We obtain quotes, compare terms, and negotiate on your behalf."],
+              ["Procurement & QC", "Place orders, oversee production, and conduct quality inspections."],
+              ["Logistics & Handover", "Coordinate shipping and deliver goods to your destination hassle-free."]
             ].map(([title, desc], i) => (
               <div className="flex items-start space-x-6" key={i}>
                 <div className="bg-corporate-navy text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">{i + 1}</div>
@@ -102,13 +101,13 @@ const QualityAssurance = () => {
         {/* CTA */}
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-muted p-8 rounded-lg">
-            <ShieldCheck className="w-16 h-16 text-corporate-navy mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-4">Need Reliable Quality Control?</h3>
+            <CheckCircle className="w-16 h-16 text-corporate-navy mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-4">Ready for Stress-Free Procurement?</h3>
             <p className="text-muted-foreground mb-6">
-              Let us help you maintain quality and confidence in every shipment.
+              Let us manage every step of your sourcing process so you can focus on growing your business.
             </p>
             <Button size="lg" className="bg-corporate-navy hover:bg-corporate-navy/90">
-              Book a QA Service
+              Get Started Now
             </Button>
           </div>
         </div>
@@ -119,4 +118,4 @@ const QualityAssurance = () => {
   );
 };
 
-export default QualityAssurance;
+export default EndToEndProcurement;
