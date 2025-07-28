@@ -1,3 +1,4 @@
+import animate from "tailwindcss-animate";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -17,6 +18,9 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+    fontFamily: {
+      sans: ["system-ui"],
+    },
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
@@ -100,5 +104,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [animate],
 } satisfies Config;

@@ -4,19 +4,19 @@ import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white text-black">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <img 
           src={heroImage} 
           alt="Global sourcing and procurement" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 gradient-hero opacity-90"></div>
-      </div>
+      </div> */}
       
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center text-white animate-fade-in">
+      <div className="relative z-10 container mx-auto px-6 text-center text-black animate-fade-in">
         <img src={logo} alt="MyrLink Logo" className="mb-8 mx-auto w-32 md:w-48" />
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Source Directly

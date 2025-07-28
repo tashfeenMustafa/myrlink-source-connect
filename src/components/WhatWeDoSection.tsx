@@ -16,12 +16,12 @@ const WhatWeDoSection = () => {
     {
       icon: <Cog className="w-8 h-8 text-corporate-blue" />,
       title: "OEM/ODM Manufacturing",
-      description: "From concept to production, we manage your private label and custom manufacturing projects with precision, ensuring quality standards meet Western expectations."
+      description: "From concept to production, we manage your private label and custom manufacturing projects with precision, ensuring quality standards that meet Western expectations."
     },
     {
       icon: <Truck className="w-8 h-8 text-corporate-blue" />,
       title: "End-to-End Procurement",
-      description: "Complete procurement management including negotiation, quality control, logistics coordination, and delivery tracking. One partner, total solution."
+      description: "Complete procurement management including negotiation, quality control, logistics coordination, and delivery tracking. One partner, one total solution."
     },
     {
       icon: <Shield className="w-8 h-8 text-corporate-blue" />,

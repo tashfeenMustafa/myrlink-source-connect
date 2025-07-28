@@ -5,7 +5,7 @@ const WhoWeAreSection = () => {
   const features = [
     {
       icon: <Globe className="w-6 h-6 text-corporate-blue" />,
-      title: "15+ Years of Global Experience",
+      title: "20+ Years of Global Experience",
       description: "Established relationships with manufacturers across Asia"
     },
     {
@@ -36,9 +36,9 @@ const WhoWeAreSection = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              MyrLink is a Canadian-based global procurement specialist with deep roots in Asia. 
+              MyrLink is a Canada-based global procurement specialist with deep roots in Asia. 
               Founded with the vision of making international sourcing accessible and reliable, 
-              we've built a reputation for delivering exceptional value to businesses of all sizes.
+              we've earned a reputation for delivering exceptional value to businesses of all sizes.
             </p>
             
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">

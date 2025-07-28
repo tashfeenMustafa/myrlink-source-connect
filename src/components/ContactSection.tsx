@@ -178,8 +178,7 @@ const ContactSection = () => {
                   <div className="flex items-center space-x-4 mb-4">
                     <Award className="w-8 h-8 text-yellow-300" />
                     <div>
-                      <h4 className="font-semibold text-lg">Trusted Partner</h4>
-                      <p className="text-blue-100">Proudly part of the Niagara Falls Innovation Hub</p>
+                      <h4 className="font-semibold text-lg">Proudly part of the Niagara Falls Innovation Hub</h4>
                     </div>
                   </div>
                   <p className="text-blue-100 text-sm leading-relaxed">
