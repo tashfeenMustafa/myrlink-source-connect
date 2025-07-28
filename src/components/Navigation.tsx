@@ -49,39 +49,43 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <a href="/" className="flex items-center space-x-2">
             <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-auto" />
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link to="/">
+                  <a href="/">
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       Home
                     </NavigationMenuLink>
-                  </Link>
+                  </a>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/#about">
+                  <a href="#about">
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       About Us
                     </NavigationMenuLink>
-                  </Link>
+                  </a>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>
+                    <a href="#services">
+                    Services
+                    </a>
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid gap-3 p-6 w-[500px] lg:w-[600px]">
                       <div className="grid gap-2">
                         {serviceItems.map((item) => (
-                          <Link
+                          <a
                             key={item.href}
-                            to={item.href}
+                            href={item.href}
                             className="group grid h-auto w-full items-center justify-start gap-1 rounded-md p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                           >
                             <div className="text-sm font-medium leading-none group-hover:underline">
@@ -90,7 +94,7 @@ const Navigation = () => {
                             <div className="line-clamp-2 text-xs leading-snug text-muted-foreground">
                               {item.description}
                             </div>
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -98,27 +102,27 @@ const Navigation = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/#testimonials">
+                  <a href="#testimonials">
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       Testimonials
                     </NavigationMenuLink>
-                  </Link>
+                  </a>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/#case-studies">
+                  <a href="#case-studies">
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       Case Studies
                     </NavigationMenuLink>
-                  </Link>
+                  </a>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/#contact">
+                  <a href="#contact">
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       Contact Us
                     </NavigationMenuLink>
-                  </Link>
+                  </a>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -139,59 +143,67 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background">
-              <Link
-                to="/"
+              <a
+                href="/"
                 className="block px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
-              </Link>
-              <Link
-                to="/#about"
+              </a>
+              <a
+                href="#about"
                 className="block px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
-              </Link>
+              </a>
 
               {/* Mobile Services Submenu */}
               <div className="px-3 py-2">
-                <div className="text-base font-medium text-foreground mb-2">Services</div>
+                <div className="text-base font-medium text-foreground mb-2">
+                  <a
+                    href="#services"
+                    className="block px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Services
+                  </a>
+                </div>
                 <div className="pl-4 space-y-1">
                   {serviceItems.map((item) => (
-                    <Link
+                    <a
                       key={item.href}
-                      to={item.href}
+                      href={item.href}
                       className="block px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded-md"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.title}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>
 
-              <Link
-                to="/#testimonials"
+              <a
+                href="#testimonials"
                 className="block px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonials
-              </Link>
-              <Link
-                to="/#case-studies"
+              </a>
+              <a
+                href="#case-studies"
                 className="block px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Case Studies
-              </Link>
-              <Link
-                to="/#contact"
+              </a>
+              <a
+                href="#contact"
                 className="block px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact Us
-              </Link>
+              </a>
             </div>
           </div>
         )}

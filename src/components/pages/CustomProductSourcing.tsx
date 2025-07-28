@@ -1,6 +1,7 @@
 import { ArrowLeft, Package, Lightbulb, Users, Zap, Target, Cog } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Navigation from "../Navigation";
 import Footer from "@/components/Footer";
 
 const CustomProductSourcing = () => {

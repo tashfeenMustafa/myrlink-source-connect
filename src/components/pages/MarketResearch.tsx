@@ -2,12 +2,14 @@
 import { ArrowLeft, BarChart3, Search, Globe2, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Navigation from "../Navigation";
 import Footer from "@/components/Footer";
 
 const MarketResearch = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
+      
       <div className="bg-corporate-navy text-white py-6">
         <div className="container mx-auto px-6">
           <Button

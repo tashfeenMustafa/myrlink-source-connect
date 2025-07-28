@@ -2,6 +2,7 @@
 import { ArrowLeft, Truck, Plane, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Navigation from "../Navigation";
 import Footer from "@/components/Footer";
 
 const LogisticsShipping = () => {
