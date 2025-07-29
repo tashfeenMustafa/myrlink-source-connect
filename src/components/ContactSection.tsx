@@ -182,7 +182,7 @@ const ContactSection = () => {
                     </div>
                   </div>
                   <p className="text-blue-100 text-sm leading-relaxed">
-                    Certified member of Canada's leading innovation ecosystem, 
+                    Member of Canada's leading innovation ecosystem, 
                     demonstrating our commitment to excellence and business integrity.
                   </p>
                 </CardContent>
