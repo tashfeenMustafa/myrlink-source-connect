@@ -55,7 +55,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/services/supplier-audits-qc" className="hover:text-white transition-colors">
-                  Market Research
+                  Supplier Audits & QC
                 </a>
               </li>
             </ul>
