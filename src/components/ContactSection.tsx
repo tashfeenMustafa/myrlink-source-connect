@@ -36,7 +36,7 @@ const ContactSection = () => {
     {
       icon: <Phone className="w-6 h-6 text-corporate-blue" />,
       title: "Phone",
-      content: "+1 (365)-880-0155",
+      content: "+1 (647) 691 6799",
       subtitle: "Available 9 AM - 6 PM EST"
     },
     {
@@ -54,7 +54,7 @@ const ContactSection = () => {
     {
       icon: <Clock className="w-6 h-6 text-corporate-blue" />,
       title: "Business Hours",
-      content: "Mon-Fri: 9 AM - 6 PM EST",
+      content: "Mon-Fri: 9 AM - 5 PM EST",
       subtitle: "Extended hours for Asia timezone"
     }
   ];

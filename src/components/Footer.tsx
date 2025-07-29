@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-blue-300" />
-                <span className="text-blue-200 text-sm">+1 (365)-880-0155</span>
+                <span className="text-blue-200 text-sm">+1 (647) 691 6799</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-blue-300" />
@@ -66,7 +66,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Business Hours</h4>
             <div className="space-y-2 text-blue-200 text-sm">
               <div>Monday - Friday</div>
-              <div className="font-medium">9:00 AM - 6:00 PM EST</div>
+              <div className="font-medium">9:00 AM - 5:00 PM EST</div>
               <div className="mt-4">Extended hours available for Asian timezone coordination</div>
             </div>
           </div>
