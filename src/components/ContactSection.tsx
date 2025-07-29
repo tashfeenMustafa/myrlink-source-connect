@@ -6,6 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock, Award } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import PhoneInput from 'react-phone-number-input';
+import { isValidPhoneNumber } from 'libphonenumber-js';
+import 'react-phone-number-input/style.css';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -13,8 +16,10 @@ const ContactSection = () => {
     name: '',
     email: '',
     company: '',
+    phone: '',
     message: ''
   });
+  const [phoneError, setPhoneError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -23,13 +28,30 @@ const ContactSection = () => {
     });
   };
 
+  const handlePhoneChange = (value: string | undefined) => {
+    setFormData({ ...formData, phone: value || '' });
+    setPhoneError('');
+
+    if (value && !isValidPhoneNumber(value)) {
+      setPhoneError('Please enter a valid phone number');
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate phone number if provided
+    if (formData.phone && !isValidPhoneNumber(formData.phone)) {
+      setPhoneError('Please enter a valid phone number');
+      return;
+    }
+
     toast({
       title: "Message sent successfully!",
       description: "We'll get back to you within 24 hours.",
     });
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({ name: '', email: '', company: '', phone: '', message: '' });
+    setPhoneError('');
   };
 
   const contactInfo = [
@@ -37,7 +59,7 @@ const ContactSection = () => {
       icon: <Phone className="w-6 h-6 text-corporate-blue" />,
       title: "Phone",
       content: "+1 (647) 691 6799",
-      subtitle: "Available 9 AM - 6 PM EST"
+      subtitle: "Available 9 AM - 5 PM EST"
     },
     {
       icon: <Mail className="w-6 h-6 text-corporate-blue" />,
@@ -68,7 +90,7 @@ const ContactSection = () => {
             Get Started Today
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ready to reduce your procurement costs and streamline your supply chain? 
+            Ready to reduce your procurement costs and streamline your supply chain?
             Let's discuss how MyrLink can transform your sourcing operations.
           </p>
         </div>
@@ -81,7 +103,7 @@ const ContactSection = () => {
                 <h3 className="text-2xl font-semibold text-foreground mb-6">
                   Request a Free Cost Estimate
                 </h3>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -108,7 +130,7 @@ const ContactSection = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="company">Company Name</Label>
                     <Input
@@ -119,7 +141,22 @@ const ContactSection = () => {
                       className="mt-2"
                     />
                   </div>
-                  
+
+                  <div>
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <PhoneInput
+                      international
+                      countryCallingCodeEditable={false}
+                      defaultCountry="US"
+                      value={formData.phone}
+                      onChange={handlePhoneChange}
+                      className="mt-2 phone-input"
+                    />
+                    {phoneError && (
+                      <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+                    )}
+                  </div>
+
                   <div>
                     <Label htmlFor="message">Tell us about your sourcing needs *</Label>
                     <Textarea
@@ -133,7 +170,7 @@ const ContactSection = () => {
                       placeholder="Describe the products you need to source, quantities, timeline, and any specific requirements..."
                     />
                   </div>
-                  
+
                   <Button type="submit" variant="cta" className="w-full">
                     Get Free Estimate
                   </Button>
@@ -149,7 +186,7 @@ const ContactSection = () => {
                 <h3 className="text-2xl font-semibold text-foreground mb-6">
                   Contact Information
                 </h3>
-                
+
                 <div className="grid gap-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start space-x-4">
@@ -182,7 +219,7 @@ const ContactSection = () => {
                     </div>
                   </div>
                   <p className="text-blue-100 text-sm leading-relaxed">
-                    Member of Canada's leading innovation ecosystem, 
+                    Member of Canada's leading innovation ecosystem,
                     demonstrating our commitment to excellence and business integrity.
                   </p>
                 </CardContent>
